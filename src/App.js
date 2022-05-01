@@ -4,11 +4,11 @@ import About from './components/About';
 import TextArea from './components/TextArea';
 import DisplayMessage from './components/Display-Message';
 import React,{ useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 import Contact from './components/Contact';
 
 
@@ -43,17 +43,20 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar title='TextUtils' toggleBgMode={toggleBgMode} mode={mode} />
-        <DisplayMessage alert={alert} />
-        <div className="container">
-          <Routes>
+      {/* <Router> */}
+      <Navbar title='TextUtils' toggleBgMode={toggleBgMode} mode={mode} />
+      <DisplayMessage alert={alert} />
+      <div className="container">
+        <TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />
+        <About mode={mode} />
+        <Contact mode={mode} />
+        {/* <Routes>
             <Route path="/" element={<TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />} />
             <Route path="text-utils/about" element={<About mode={mode} />} />
             <Route path="text-utils/contact" element={<Contact mode={mode} />} />
-          </Routes>
-        </div>
-      </Router>
+          </Routes> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }
