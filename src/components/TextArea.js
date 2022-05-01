@@ -39,15 +39,15 @@ export default function TextArea(props) {
 
     return (
         <>
-            <div className='container my-3'>
+            <div className='container my-3' style={{ color: props.mode === 'dark' ? 'white' : '#212529' }}>
                 <div>
                     <h1 className='mb-4'>{props.heading}</h1>
                     <div className="mb-3">
-                        <textarea className="form-control" id="textBox" value={text} onChange={handleOnChange} rows="10" />
+                        <textarea className="form-control" style={{ backgroundColor: props.mode === 'dark' ? '#18283e' : 'white',color: props.mode === 'dark' ? 'white' : '#212529' }} id="textBox" value={text} onChange={handleOnChange} rows="10" />
                     </div>
                     <div className="mb-3 form-check">
-                        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                        <label className="form-check-label" htmlFor="exampleCheck1">I'm not a robot</label>
+                        <input type="checkbox" className="form-check-input" id="robotCheck" disabled={text.length === 0} />
+                        <label className="form-check-label" htmlFor="robotCheck">I'm not a robot</label>
                     </div>
                     <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleUpperCaseClick}>Convert to Uppercase</button>
                     <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleLowerCaseClick}>Convert to Lowercase</button>
@@ -57,7 +57,7 @@ export default function TextArea(props) {
                 </div>
             </div>
 
-            <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>
+            <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#212529' }}>
                 <h2>Your text summary</h2>
                 <p>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and {text.length} characters</p>
                 <h2>Preview</h2>

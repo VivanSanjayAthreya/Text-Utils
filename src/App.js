@@ -6,6 +6,7 @@ import React,{ useState } from 'react';
 
 function App() {
   const [alert,setAlert] = useState(null);
+  const [mode,setMode] = useState('light');
 
   const showDisplayMessage = (message,type) => {
     setAlert({
@@ -17,12 +18,27 @@ function App() {
     },1500);
   }
 
+  const toggleBgMode = () => {
+    if (mode === 'light') {
+      setMode('dark');
+      document.body.style.backgroundColor = '#1F2937';
+      // document.body.style.color = 'white';
+      showDisplayMessage('Dark mode is Enabled!','success');
+    }
+    else {
+      setMode('light');
+      document.body.style.backgroundColor = '#fff';
+      // document.body.style.color = '#212529';
+      showDisplayMessage('Light mode is Enabled!','success');
+    }
+  }
+
   return (
     <>
-      <Navbar title='TextUtils' />
+      <Navbar title='TextUtils' toggleBgMode={toggleBgMode} mode={mode} />
       <DisplayMessage alert={alert} />
       <div className="container">
-        <TextArea showDisplayMessage={showDisplayMessage} heading="Try TextUtils - Enter the text below" />
+        <TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />
       </div>
     </>
   );
