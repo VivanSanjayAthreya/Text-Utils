@@ -51,7 +51,7 @@ function App() {
         <About mode={mode} />
         <Contact mode={mode} /> */}
           <Routes>
-            <Route path="/" element={<TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />} />
+            <Route path="text-utils/" element={<TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />} />
             <Route path="text-utils/about" element={<About mode={mode} />} />
             <Route path="text-utils/contact" element={<Contact mode={mode} />} />
           </Routes>
