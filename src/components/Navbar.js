@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom';
+// import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   return (
     <>
@@ -32,9 +32,7 @@ export default function Navbar(props) {
               <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'light' ? 'Disable' : 'Enable'} Light Mode</label>
             </div>
             <form className="d-flex">
-              <button type="button" className={`btn ${props.mode === 'light' ? 'btn-outline-primary' : 'btn-primary btn-light'}`}
-              // onClick={() => navigate('/contact')}
-              >{props.contactText}</button>
+              <button type="button" className={`btn ${props.mode === 'light' ? 'btn-outline-primary' : 'btn-primary btn-light'}`} onClick={() => navigate('text-utils/contact')}>{props.contactText}</button>
             </form>
           </div>
         </div>
