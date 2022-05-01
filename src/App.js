@@ -48,7 +48,7 @@ function App() {
         <DisplayMessage alert={alert} />
         <div className="container">
           <Routes>
-            <Route index element={<TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />} />
+            <Route path="text-utils/" element={<TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />} />
             <Route path="text-utils/about" element={<About mode={mode} />} />
             <Route path="text-utils/contact" element={<Contact mode={mode} />} />
           </Routes>
