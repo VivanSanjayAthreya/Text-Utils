@@ -1,8 +1,16 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import About from './components/About';
 import TextArea from './components/TextArea';
 import DisplayMessage from './components/Display-Message';
 import React,{ useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Contact from './components/Contact';
+
 
 function App() {
   const [alert,setAlert] = useState(null);
@@ -35,11 +43,17 @@ function App() {
 
   return (
     <>
-      <Navbar title='TextUtils' toggleBgMode={toggleBgMode} mode={mode} />
-      <DisplayMessage alert={alert} />
-      <div className="container">
-        <TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />
-      </div>
+      <Router>
+        <Navbar title='TextUtils' toggleBgMode={toggleBgMode} mode={mode} />
+        <DisplayMessage alert={alert} />
+        <div className="container">
+          <Routes>
+            <Route index element={<TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />} />
+            <Route path="about" element={<About mode={mode} />} />
+            <Route path="contact" element={<Contact mode={mode} />} />
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }
