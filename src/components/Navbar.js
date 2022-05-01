@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
 
@@ -18,12 +19,12 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                {/* <Link className="nav-link active" aria-current="page" to="/">Home</Link> */}
-                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                {/* <a className="nav-link active" aria-current="page" href="/">Home</a> */}
               </li>
               <li className="nav-item">
-                {/* <Link className="nav-link" to="/text-utils/about">{props.aboutText}</Link> */}
-                <a className="nav-link" href="/text-utils/about">{props.aboutText}</a>
+                <Link className="nav-link" to="/text-utils/about">{props.aboutText}</Link>
+                {/* <a className="nav-link" href="/text-utils/about">{props.aboutText}</a> */}
               </li>
             </ul>
             <div className={`form-check form-switch mx-3 text-${props.mode === 'light' ? 'dark' : 'light'}`}>
