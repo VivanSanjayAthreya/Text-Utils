@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
+
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`} >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">{props.title}</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,8 +21,12 @@ export default function Navbar(props) {
                 <a className="nav-link" href="/">{props.aboutText}</a>
               </li>
             </ul>
+            <div className={`form-check form-switch mx-3 text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+              <input className="form-check-input" onChange={props.toggleBgMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={props.mode === "light"} />
+              <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'light' ? 'Disable' : 'Enable'} Light Mode</label>
+            </div>
             <form className="d-flex">
-              <button type="button" className="btn btn-light btn-outline-primary">{props.contactText}</button>
+              <button type="button" className={`btn ${props.mode === 'light' ? 'btn-outline-primary' : 'btn-primary btn-light'} `}>{props.contactText}</button>
             </form>
           </div>
         </div>
