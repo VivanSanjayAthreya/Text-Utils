@@ -31,13 +31,11 @@ function App() {
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#1F2937';
-      // document.body.style.color = 'white';
       showDisplayMessage('Dark mode is Enabled!','success');
     }
     else {
       setMode('light');
       document.body.style.backgroundColor = '#fff';
-      // document.body.style.color = '#212529';
       showDisplayMessage('Light mode is Enabled!','success');
     }
   }
@@ -49,9 +47,9 @@ function App() {
         <DisplayMessage alert={alert} />
         <div className="container">
           <Routes>
-            <Route index element={<TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />} />
-            <Route path="about" element={<About mode={mode} />} />
-            <Route path="contact" element={<Contact mode={mode} />} />
+            <Route path="text-utils/" element={<TextArea showDisplayMessage={showDisplayMessage} mode={mode} heading="Try TextUtils - Enter the text below" />} />
+            <Route path="text-utils/about" element={<About mode={mode} />} />
+            <Route path="text-utils/contact" element={<Contact mode={mode} />} />
           </Routes>
         </div>
         <Footer />
