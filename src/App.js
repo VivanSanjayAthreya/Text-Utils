@@ -10,6 +10,7 @@ import {
   Route
 } from "react-router-dom";
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
             <Route path="contact" element={<Contact mode={mode} />} />
           </Routes>
         </div>
+        <Footer />
       </Router>
     </>
   );

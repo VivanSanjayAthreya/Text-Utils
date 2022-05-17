@@ -62,11 +62,11 @@ export default function TextArea(props) {
                 </div>
             </div>
 
-            <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#212529' }}>
+            <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#212529',paddingBottom: '3rem' }}>
                 <h2>Your text summary</h2>
                 <p>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and {text.length} characters</p>
                 <h2>Preview</h2>
-                <p>{text.length > 0 ? text : "Nothing to preview!"}</p>
+                <p style={{ textAlign: 'justify' }}>{text.length > 0 ? text : "Nothing to preview!"}</p>
             </div>
 
         </>)

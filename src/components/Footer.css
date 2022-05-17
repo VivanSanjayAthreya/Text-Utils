@@ -1,0 +1,9 @@
+.footerStyle {
+    position:fixed;
+    left:0;
+    bottom:0;
+    right:0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
