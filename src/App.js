@@ -52,7 +52,7 @@ function App() {
             <Route path="text-utils/contact" element={<Contact mode={mode} />} />
           </Routes>
         </div>
-        <Footer />
+        <Footer mode={mode} />
       </Router>
     </>
   );

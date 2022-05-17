@@ -1,9 +1,9 @@
 import React from 'react'
 import './Footer.css'
 
-export default function Footer() {
+export default function Footer(props) {
     return (
-        <footer className="bg-dark text-light py-3 footerStyle">
+        <footer className={`bg-${props.mode} text-${props.mode === 'dark' ? 'light' : 'dark'} py-3 footerStyle`}>
             <span>Copyright &copy; Vivan Sanjay Athreya</span>
         </footer>
     )
