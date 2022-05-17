@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "//vivansanjayathreya.github.io/text-utils/static/css/main.ddb90ef6.css",
-    "main.js": "//vivansanjayathreya.github.io/text-utils/static/js/main.507a1cae.js",
+    "main.js": "//vivansanjayathreya.github.io/text-utils/static/js/main.faf86abf.js",
     "static/js/787.0cbdef75.chunk.js": "//vivansanjayathreya.github.io/text-utils/static/js/787.0cbdef75.chunk.js",
     "index.html": "//vivansanjayathreya.github.io/text-utils/index.html",
     "main.ddb90ef6.css.map": "//vivansanjayathreya.github.io/text-utils/static/css/main.ddb90ef6.css.map",
-    "main.507a1cae.js.map": "//vivansanjayathreya.github.io/text-utils/static/js/main.507a1cae.js.map",
+    "main.faf86abf.js.map": "//vivansanjayathreya.github.io/text-utils/static/js/main.faf86abf.js.map",
     "787.0cbdef75.chunk.js.map": "//vivansanjayathreya.github.io/text-utils/static/js/787.0cbdef75.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ddb90ef6.css",
-    "static/js/main.507a1cae.js"
+    "static/js/main.faf86abf.js"
   ]
 }
