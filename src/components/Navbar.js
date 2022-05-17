@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link,useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export default function Navbar(props) {
 
   const navigate = useNavigate()
+  const currentPath = useLocation().pathname;
 
   return (
     <>
@@ -17,10 +19,10 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/text-utils/">Home</Link>
+                <Link className={`nav-link ${currentPath === '/text-utils/' ? 'active' : ''}`} aria-current="page" to="/text-utils/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/text-utils/about">{props.aboutText}</Link>
+                <Link className={`nav-link ${currentPath === '/text-utils/about' ? 'active' : ''}`} to="/text-utils/about">{props.aboutText}</Link>
               </li>
             </ul>
             <div className={`form-check form-switch mx-3 text-${props.mode === 'light' ? 'dark' : 'light'}`}>
@@ -28,7 +30,7 @@ export default function Navbar(props) {
               <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode === 'light' ? 'Disable' : 'Enable'} Light Mode</label>
             </div>
             <form className="d-flex">
-              <button type="button" className={`btn ${props.mode === 'light' ? 'btn-outline-primary' : 'btn-primary btn-light'}`} onClick={() => navigate('text-utils/contact')}>{props.contactText}</button>
+              <button type="button" className={`btn ${props.mode === 'light' ? 'btn-outline-primary' : 'btn-primary btn-light'} ${currentPath === '/text-utils/contact' ? 'active' : ''}`} onClick={() => navigate('text-utils/contact')}>{props.contactText}</button>
             </form>
           </div>
         </div>
