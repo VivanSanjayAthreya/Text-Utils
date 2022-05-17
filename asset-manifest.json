@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "//vivansanjayathreya.github.io/text-utils/static/css/main.073c9b0a.css",
-    "main.js": "//vivansanjayathreya.github.io/text-utils/static/js/main.e61cdc1f.js",
+    "main.css": "//vivansanjayathreya.github.io/text-utils/static/css/main.ddb90ef6.css",
+    "main.js": "//vivansanjayathreya.github.io/text-utils/static/js/main.c5ad1260.js",
     "static/js/787.0cbdef75.chunk.js": "//vivansanjayathreya.github.io/text-utils/static/js/787.0cbdef75.chunk.js",
     "index.html": "//vivansanjayathreya.github.io/text-utils/index.html",
-    "main.073c9b0a.css.map": "//vivansanjayathreya.github.io/text-utils/static/css/main.073c9b0a.css.map",
-    "main.e61cdc1f.js.map": "//vivansanjayathreya.github.io/text-utils/static/js/main.e61cdc1f.js.map",
+    "main.ddb90ef6.css.map": "//vivansanjayathreya.github.io/text-utils/static/css/main.ddb90ef6.css.map",
+    "main.c5ad1260.js.map": "//vivansanjayathreya.github.io/text-utils/static/js/main.c5ad1260.js.map",
     "787.0cbdef75.chunk.js.map": "//vivansanjayathreya.github.io/text-utils/static/js/787.0cbdef75.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.e61cdc1f.js"
+    "static/css/main.ddb90ef6.css",
+    "static/js/main.c5ad1260.js"
   ]
 }
